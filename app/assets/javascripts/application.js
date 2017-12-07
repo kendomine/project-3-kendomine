@@ -13,3 +13,6 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+<script src="http://platform.fatsecret.com/js?key=379da0b756104441aa2e30ba06d3051b
+&auto_load=true"></script>

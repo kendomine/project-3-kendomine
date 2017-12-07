@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   # User Dashboard/Company Applying to
   get '/dashboard', to: 'entries#index', as: 'dashboard'
-  get '/new/entry', to: 'entries#new', as: 'companies'
+  get '/new/entry', to: 'entries#new', as: 'entries'
   post '/new/entry', to: 'entries#create'
   get '/entry/:id', to: 'entries#show', as: 'entry'
   get '/entries/:user_id', to: 'entries#chart'

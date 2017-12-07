@@ -1,3 +1,21 @@
-<h1 id="dashboard" style="text-align: center">Daily Entry Info</h1>
+<div class="container-fluid">
+	<h1 id="dashboard" style="text-align: center">Nutrition Log</h1>
+	  <div class="col-xs-5">
+	  	<h2 style="text-align: center">FOOD LOG API</h2>
+	  	<script src="http://platform.fatsecret.com/js?key=379da0b756104441aa2e30ba06d3051b
+         &auto_load=true&auto_template=false"></script>
+	  	<div id="my_container" class="fatsecret_container"></div>
+	  	
+	    <script>
+          fatsecret.setContainer("my_container");
+          fatsecret.setCanvas("home");
+        </script>
+	  </div>
+	  <div class="col-xs-5">
+	  	<h2 style="text-align: center">New Entry</h2>
+	  	<%=render "form"%>
+	  </div>
+</div>
 
-<%=render "form"%>
+
+
