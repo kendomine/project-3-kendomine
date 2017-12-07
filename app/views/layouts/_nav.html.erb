@@ -1,0 +1,23 @@
+<nav >
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li> <a class="navbar-brand" href="/"><i class="fa fa-balance-scale" aria-hidden="true"></i></a></li>
+      <%if current_user%>
+      <li> <%= link_to "Profile", my_profile_path, class:"nav-link"%> </li>
+      <li> <%= link_to "Dashboard", dashboard_path, class:"nav-link"%> </li>
+      <%end%>
+    </ul>
+
+
+    <ul class="nav navbar-nav navbar-right">
+      <% if current_user %>
+
+        <li ><%= link_to "Log Out", logout_path, method: :delete,class:"nav-link" %></li>
+
+      <% else %>
+        <li ><%= link_to "Create Account", signup_path, class:"nav-link"%></li>
+        <li ><%= link_to "Log In", login_path, class:"nav-link"%></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>

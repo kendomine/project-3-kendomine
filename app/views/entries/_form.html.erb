@@ -1,0 +1,57 @@
+<div style="margin-top: 20px;" class="row">
+<div class="col-xs-4 col-xs-offset-4">
+<%= form_with scope: :entries, model: @entry, class: "form-horizontal" do |form| %>
+<div class="form-group">
+		<%= form.label :date, "Entry Date:" %>
+		<%= form.text_field(:date, class: 'form-control') %>
+</div>
+<div class="form-group">
+		<%= form.label :day, "Entry Day:" %>
+		<%= form.text_field(:day, class: 'form-control') %>
+<div class="form-group">
+		<%= form.label :weighIn, "Morning Weigh In(lb):" %>
+		<%= form.text_field(:weighIn, class: 'form-control') %>
+</div>
+<div class="form-group">
+		<%= form.label :caloricGoal, "Caloric Goal(kcal):" %>
+		<%= form.text_area(:caloricGoal, class: 'form-control') %>
+</div>
+<div class="form-group">
+		<%= form.label :fatGoal, "Fat Goal(g):" %>
+		<%= form.text_area(:fatGoal, class: 'form-control') %>
+</div>
+<div class="form-group">
+		<%= form.label :carbGoal, "Carb Goal(g):" %>
+		<%= form.text_area(:carbGoal, class: 'form-control') %>
+</div>
+<div class="form-group">
+		<%= form.label :proteinGoal, "Protein Goal:" %>
+		<%= form.text_area(:proteinGoal, class: 'form-control') %>
+</div>
+<div class="form-group">
+		<%= form.label :actualCalories, "Actual Calories Consumed(kcal):" %>
+		<%= form.text_area(:actualCalories, class: 'form-control') %>
+</div>
+<div class="form-group">
+		<%= form.label :actualFat, "Actual Fat Consumed(g):" %>
+		<%= form.text_area(:actualFat, class: 'form-control') %>
+</div>
+<div class="form-group">
+		<%= form.label :actualCarb, "Actul Carbs Consumed(g):" %>
+		<%= form.text_area(:actualCarb, class: 'form-control') %>
+</div>
+<div class="form-group">
+		<%= form.label :actualProtein, "Actual Protein Consumed:" %>
+		<%= form.text_area(:actualProtein, class: 'form-control') %>
+</div>
+<div class="form-group">
+		<%= form.label :progress, "Current Progress:" %>
+		<%= form.select :progress, ['Resume Sent', 'Screen', 'Interview', 'Negotiation', 'Completed'] %>
+</div>
+
+<div class="form-group">
+		<%= form.submit('Submit', class: 'btn-sm btn-primary') %>
+</div>
+<% end %>
+</div>
+</div>

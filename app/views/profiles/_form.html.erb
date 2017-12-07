@@ -1,0 +1,46 @@
+<div style="margin-top: 20px;" class="row">
+<div class="col-xs-4 col-xs-offset-4">
+<%= form_with scope: :profile, model: @profile, class: "form-horizontal", local: true do |form| %>
+<div class="form-group">
+		<%= form.label :full_name, "Your Full Name:" %>
+		<%= form.text_field(:full_name, class: 'form-control',required: true) %>
+</div>
+<div class="form-group">
+		<%= form.label :email, "Email:" %>
+		<%= form.text_field(:email, class: 'form-control', required: true) %>
+</div>
+<div class="form-group">
+		<%= form.label :gender, "Gender:" %>
+		<%= form.text_field(:gender, class: 'form-control', required: true) %>
+</div>
+<div class="form-group">
+		<%= form.label :age, "Age:" %>
+		<%= form.text_field(:age, class: 'form-control', required: true) %>
+</div>
+<div class="form-group">
+		<%= form.label :weight, "Weight(lb):" %>
+		<%= form.text_field(:weight, class: 'form-control', required: true) %>
+</div>
+<div class="form-group">
+		<%= form.label :height, "Height:" %>
+		<%= form.text_field(:height, class: 'form-control',required: true) %>
+</div>
+<div class="form-group">
+		<%= form.label :activity_level, "Activity Level:" %>
+		<%= form.text_field(:activity_level, class: 'form-control', required: true) %>
+</div>
+<div class="form-group">
+		<%= form.label :goal, "Goal:" %>
+		<%= form.text_field(:goal, class: 'form-control', required: false) %>
+</div>
+<div class="form-group">
+		<%= form.label :length, "Targeted Weight:" %>
+		<%= form.text_field(:length, class: 'form-control', required: false) %>
+</div>
+
+<div class="form-group">
+		<%= form.submit('Submit', class: 'btn-sm btn-primary') %>
+</div>
+<% end %>
+</div>
+</div>
