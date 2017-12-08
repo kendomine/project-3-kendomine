@@ -1,11 +1,14 @@
 
+    <div id ="dashboard">DIARY ENTRY FROM <%=@entry.day%> <%=@entry.day%> </div>
+
 <%=link_to "Update Status", edit_entry_path(@entry.id)%></br>
 <%=link_to "Delete", entry_path(@entry.id), method: :delete%></br>
+
 <%=@entry.day%> </br>
-<%=@entry.date%> </br>
+ </br>
 <%=@entry.weighIn%> </br>
 <%=@entry.actualCalories%> </br>
 <%=@entry.actualFat%> </br>
 <%=@entry.actualCarb%> </br>
 <%=@entry.actualProtein%> </br>
-<%end%>
+

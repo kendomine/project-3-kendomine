@@ -1,4 +1,4 @@
 class Entry < ApplicationRecord
 belongs_to :user
-validates :date, :caloricgoal, :actualCalories, presence:true
+validates :date, :caloricGoal, :actualCalories, presence:true
 end

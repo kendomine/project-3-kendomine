@@ -7,7 +7,7 @@ class EntriesController < ApplicationController
     if current_user.profile == nil
       flash[:error] = "You have a empty profile please update it"
     end
-    @entries = current_user.entries.all.sort_by {|entry| entry[:entry_name]}
+    @entries = current_user.entries.all.sort_by {|entry| entry[:date]}
   end
 
   def new
@@ -43,7 +43,7 @@ class EntriesController < ApplicationController
 
   def update
     if @entry.update(entry_params)
-      flash[:success] = "#{@entry.entry_name} status updated"
+      flash[:success] = "#{@entry.day} status updated"
       respond_to do |format|
         format.html{redirect_to dashboard_path}
         format.json {render :json =>@company}
