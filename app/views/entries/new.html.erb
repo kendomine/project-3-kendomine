@@ -14,8 +14,10 @@
 	  		<div id="my_container" class="fatsecret_container">
 	  	    </div>
 			<script>
-					fatsecret.variables.navOptions = fatsecret.navFeatures.food_diary | fatsecret.navFeatures.home;
+					fatsecret.variables.navOptions = fatsecret.navFeatures.food_diary | fatsecret.navFeatures.home | 			fatsecret.setCanvasUrl("profile.sign_in", "http://localhost:3000/login");
 			</script>
+
+
 		 	</div>
 	  	<div id="newEntry" class="col-xs-5">
 	  	<%=render "form"%>
