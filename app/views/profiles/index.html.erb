@@ -1,4 +1,47 @@
-<div class="container">
-Profile page test
+<body class ="profilepage">
+  <div class ="container-fluid">
 
-</div>    <!--container-->
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10 fill">
+          <h2 class="profilename"> <%=@profile.full_name.upcase%>
+                     <%= link_to profile_path(@profile.id) do%>
+                     <i class="fa fa-pencil" aria-hidden="true"></i>
+                     <%end%> </h2>
+  <span class="statistics">Email:</span> <%=@profile.email%>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+    <br>
+      <div class="row">
+        <div class="col-sm-1"></div>
+      <div class="col-sm-5 stats">
+        <div class="col-sm-12 header"> <h3> Stats:</h3></div>
+          <span class="statistics">Current Age:</span> <%=@profile.age%><br>
+          <span class="statistics">Height:</span> <%=@profile.height%> FT. <br>
+          <span class="statistics">Current Goal:</span> <%=@profile.goal%> <br>
+          <span class="statistics">Starting Weight:</span> <%=@profile.weight%> LBS <br>
+          <span class="statistics">Target Weight:</span> <%=@profile.length%> LBS <br>
+
+      </div>
+      <div class="col-sm-5 goals">
+        <div class="col-sm-12 header"> <h3> Goals:</h3></div>
+
+        THIS IS WHERE THE OTHER STUFF WOULD GO<br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+
+  </div>
+<body>
+
+  
+
+
+
+       

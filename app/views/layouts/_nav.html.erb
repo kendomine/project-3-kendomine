@@ -1,16 +1,19 @@
-<nav >
-  <div class="container-fluid">
+
+<div class="container-fluid">
+  <div class= "navigation">
+    <nav>
     <ul class="nav navbar-nav">
-      <li> <a class="navbar-brand" href="/"><i class="fa fa-balance-scale" aria-hidden="true"></i></a></li>
+      <li> <a class="navbar-brand" href="/"> <img src="/fav.png" width="30" height="30" alt=""></a></i></a></li>
       <%if current_user%>
       <li> <%= link_to "Profile", my_profile_path, class:"nav-link"%> </li>
       <li> <%= link_to "Dashboard", dashboard_path, class:"nav-link"%> </li>
       <li> <%= link_to "Add Entry", entries_path, class:"nav-link"%> </li>
+
       <%end%>
     </ul>
 
 
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav navbar-right" id ="navRight">
       <% if current_user %>
 
         <li ><%= link_to "Log Out", logout_path, method: :delete,class:"nav-link" %></li>
@@ -20,5 +23,8 @@
         <li ><%= link_to "Log In", login_path, class:"nav-link"%></li>
       <% end %>
     </ul>
+    </nav>
   </div>
-</nav>
+</div>
+
+

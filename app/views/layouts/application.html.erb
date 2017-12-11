@@ -14,13 +14,16 @@
      <script src="https://use.fontawesome.com/6f8b4ecbb1.js"></script>
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=PT+Mono|Ubuntu" rel="stylesheet">
+    <link rel="icon" href="/fav.png" type="image/png" sizes="16x16">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
 
   <body>
+
  <%= render "/layouts/nav" %>
+
     <% flash.each do |name, msg| %>
       <% if name == "success" %>
         <p class="alert alert-success">

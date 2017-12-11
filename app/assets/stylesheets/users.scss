@@ -1,3 +1,38 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.homepage{
+width: 100%;
+padding: 0px;
+margin:0px;
+background-image: url("https://goo.gl/Pxfeof");
+opacity: .9;
+background-repeat: no-repeat;
+background-color: black;
+width: 100%;
+}
+
+
+
+.container-fluid {
+	padding:0px;
+}
+
+ li, img, a, b {
+ color: white;
+}
+
+.label2{
+	text-align: center;
+	font-size: 7vw;
+	 text-shadow: 2px 2px black;
+}
+
+ #subtext {
+text-align: center;
+color:white;
+text-shadow: 2px 2px black;
+font-size: 1.5vw;
+
+}
+
+#navRight{
+	padding:0px;
+}
