@@ -1,5 +1,5 @@
 <div style="margin-top: 20px;" class="row">
-<div class="col-xs-4 col-xs-offset-4">
+<div class="col-xs-4 col-xs-offset-1">
 <%= form_with scope: :profile, model: @profile, class: "form-horizontal", local: true do |form| %>
 <div class="form-group">
 		<%= form.label :full_name, "Your Full Name:" %>
@@ -7,35 +7,54 @@
 </div>
 <div class="form-group">
 		<%= form.label :email, "Email:" %>
-		<%= form.text_field(:email, class: 'form-control', required: true) %>
+		<%= form.text_field(:email, class: 'form-control', required: true) %> 
 </div>
 <div class="form-group">
 		<%= form.label :gender, "Gender:" %>
-		<%= form.text_field(:gender, class: 'form-control', required: true) %>
+		<%= form.text_field(:gender, class: 'form-control',placeholder:"Male", required: true) %>
+			<div class= "descriptions">
+		<span>	<b class="bold">Male or Female</b> 
+ </span>
+	</div>
+
 </div>
 <div class="form-group">
 		<%= form.label :age, "Age:" %>
-		<%= form.text_field(:age, class: 'form-control', required: true) %>
+		<%= form.text_field(:age, class: 'form-control',placeholder:"25", required: true) %>
 </div>
 <div class="form-group">
 		<%= form.label :weight, "Weight(lb):" %>
-		<%= form.text_field(:weight, class: 'form-control', required: true) %>
+		<%= form.text_field(:weight, class: 'form-control',placeholder:"200", required: true) %>
 </div>
 <div class="form-group">
 		<%= form.label :height, "Height:" %>
-		<%= form.text_field(:height, class: 'form-control',required: true) %>
+		<%= form.text_field(:height, class: 'form-control',placeholder:"5.6",required: true) %>
 </div>
+
 <div class="form-group">
-		<%= form.label :activty_level, "Activity Level:" %>
-		<%= form.text_field(:activty_level, class: 'form-control', required: true) %>
+		<%= form.label :activity, "Activity Level:" %>
+		<%= form.text_field(:activity, class: 'form-control',placeholder:"EX: 1.2", required: true) %> 
+	<div class= "descriptions">
+		<span>	<b class="bold">Sedenary:</b> (Little to no exercise, but sedentary job) <b class="bold">INPUT: 1.2</b><br> 
+				<b class="bold">Lightly Active:</b> (moderate exercise but sedentary job)<b class="bold">INPUT: 1.375</b><br> 
+				<b class="bold">Moderately Active:</b> (intense exercise but sedentary job)<b class="bold">INPUT: 1.55</b><br> 
+				<b class="bold">Very Active:</b> (moderate exercise and active job)<b class="bold">INPUT: 1.725</b><br> 
+				<b class="bold">Extra Active:</b> (intense exercise and active job)<b class="bold">INPUT: 1.9</b><br> </span>
+	</div>
 </div>
 <div class="form-group">
 		<%= form.label :goal, "Goal:" %>
-		<%= form.text_field(:goal, class: 'form-control', required: false) %>
+		<%= form.text_field(:goal, class: 'form-control' ,placeholder:"Lose Weight or Maintain Weight or Gain Weight", required: false) %>
+			<div class= "descriptions">
+		<span>	<b class="bold">Input:</b> <b>Lose Weight</b> <br>
+				<b class="bold">Input:</b> <b>Maintain Weight</b><br>
+				<b class="bold">Input:</b> <b>Gain Weight and Size</b> <br>
+				<b class="bold">Input:</b> <b>Strength Based Training</b> </span>
+	</div>
 </div>
 <div class="form-group">
-		<%= form.label :length, "Targeted Weight:" %>
-		<%= form.text_field(:length, class: 'form-control', required: false) %>
+		<%= form.label :length, "Targeted Weight:(lb)" %>
+		<%= form.text_field(:length, class: 'form-control',placeholder:"180", required: false) %>
 </div>
 
 <div class="form-group">

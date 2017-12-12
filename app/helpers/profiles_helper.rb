@@ -7,4 +7,3 @@ module ProfilesHelper
     @profile = Profile.find(current_user.profile.id)
   end
 end
-

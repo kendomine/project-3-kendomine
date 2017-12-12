@@ -62,6 +62,7 @@ text-shadow: 2px 2px black;
 	font-weight:bold;
 
 
+
 }
 
 .login{
@@ -75,4 +76,29 @@ background-repeat: no-repeat;
 background-color: black;
 color:#d3d3d3;
 
+}
+
+.questions {
+	width: 100%;
+padding: 0px;
+margin:0px;
+background-image: url("http://papers.co/wallpaper/papers.co-hf25-manny-pacquiao-dark-boxing-legend-2-wallpaper.jpg");
+background-position:top right;
+opacity: .9;
+background-repeat: no-repeat;
+background-color: black;
+color:#d3d3d3;
+
+
+}
+
+.descriptions{
+	color:white;
+	box-shadow: 1px 1px 3px #b3b3b3;
+    border-radius: 3px;
+    background: #d3d3d3;
+}
+
+.bold {
+	color:black;
 }

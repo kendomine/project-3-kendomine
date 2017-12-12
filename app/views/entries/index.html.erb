@@ -1,6 +1,40 @@
-<div class="container-fluid">
- <div id ="dashboard"> DASHBOARD</div>
- <%=render 'entryList'%>
+<body class ="dashboards">
+  <div class ="container-fluid">
 
 
+<div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10 fill">
+          <h2 class="profilename"> DASHBOARD </h2>
+
+        </div>
+        <div class="col-sm-1"></div>
 </div>
+    <br>
+ <div class="row">
+        <div class="col-sm-1"></div>
+      	<div class="col-sm-5 maps">
+        	<div class="col-sm-12 header"> <h3> Daily Weigh In:</h3></div>
+
+			</div>
+
+      	<div class="col-sm-5 diary">
+        	 <div class="col-sm-12 header"> <h3> Entries:</h3></div>
+      			<%=render 'entryList'%>
+      			<br>
+      			<br>
+      			<br>
+
+
+      		</div>
+
+        <div class="col-sm-1"></div>
+      </div>
+
+
+
+  </div>
+<body>
+
+  
+
