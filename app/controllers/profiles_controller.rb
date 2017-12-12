@@ -6,13 +6,24 @@ class ProfilesController < ApplicationController
   def index
     if current_user.profile
       @profile = current_user.profile
-      if @profile.gender == "male"
-        @tdee = (10 * (@profile.weight * 0.45359237)) + (6.25 * ((@profile.height * 12) * 2.54)) - (5 * @profile.age + 5) * @profile.activty_level.to_i
+      @height= @profile.height * 30.48 * 6.25
+      @weight = @profile.weight * 0.45359237
+      @age = 5 * @profile.age + 5
+      @fage = 5 * @profile.age - 165
+      @bmr = 10 * @weight + @height - @age 
+      @fbmr = 10 * @weight + @height -@fage
+      @bulk = @bmr * @profile.activity + 500
+      @cut = @bmr * @profile.activity - 500
+
+
+
+
+      if @profile.gender == "Male"
+        @tdee = @bmr * @profile.activity
+     
       else
 
-
-
-        @tdee = 10 * (@profile.weight * 0.45359237) + 6.25 * ((@profile.height * 12) * 2.54) - 5 * @profile.age - 165 * @profile.activty_level.to_i
+        @tdee = @fbmr * @profile.activity
       end
     else
       redirect_to new_profile_path

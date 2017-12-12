@@ -1,6 +1,6 @@
 module ProfilesHelper
  def profile_params
-    params.require(:profile).permit(:full_name, :gender, :email, :age, :height, :weight, :activty_level)
+    params.require(:profile).permit(:full_name, :gender, :email, :age, :height, :weight, :activity, :activty_level)
   end
 
   def profile_params_id
