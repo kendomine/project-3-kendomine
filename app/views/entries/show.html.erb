@@ -1,14 +1,53 @@
-
-    <div id ="dashboard">DIARY ENTRY FROM <%=@entry.day%> <%=@entry.day%> </div>
-
+<body class ="profilepage">
+	<div class="container-fluid">
+  <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10 fill">
+          <h2 class="profilename"> DIARY ENTRY:<br></h2><h4> <%=@entry.day%> <%=@entry.date%> </h4>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+    <br>
 <%=link_to "Update Status", edit_entry_path(@entry.id)%></br>
 <%=link_to "Delete", entry_path(@entry.id), method: :delete%></br>
+ <div class="row">
+	  <div class ="col-xs-1"></div>
+	  	<div class="col-xs-5 goals">
+	  	<span class="head">Today's Goals</span> </br>
+	  	<br>
+	  	<br>
+	  	<br>
+	  	<span class="head">Calorie Goal:</span> <h4><%=@entry.caloricGoal%> g</h4> </br>
+	    <span class="head">Protein Goal(g):</span> <h4><%=@entry.proteinGoal%> g</h4> </br>
+	    <span class="head">Carb Goal(g):</span> <h4><%=@entry.carbGoal%> g</h4> </br>
+	    <span class="head">Fat Consummed(g):</span> <h4><%=@entry.fatGoal%> g</h4> </br>
 
-<%=@entry.day%> </br>
- </br>
-<%=@entry.weighIn%> </br>
-<%=@entry.actualCalories%> </br>
-<%=@entry.actualFat%> </br>
-<%=@entry.actualCarb%> </br>
-<%=@entry.actualProtein%> </br>
+		</div>
+<!--       <div class="col-sm-4 goals">
+
+	  	<span class="head">Today's Weigh In:</span> <h4><%=@entry.weighIn%></h4> </br>
+	  	<span class="head">Calories Consummed:</span> <h4><%=@entry.actualCalories%> g</h4> </br>
+	    <span class="head">Protein Consumed:(g)</span> <h4><%=@entry.actualProtein%> g</h4> </br>
+	    <span class="head">Carbs Consumed:(g)</span> <h4><%=@entry.actualCarb%> g</h4> </br>
+	    <span class="head">Fat Consumed:(g)</span> <h4><%=@entry.actualFat%> g</h4> </br>
+
+        </div>
+ -->
+
+              <div class="col-sm-5 goals">
+
+	  	<span class="head">Today's Weigh In:</span> <h4><%=@entry.weighIn%></h4> </br>
+	  	<span class="head">Calories Consumed:</span> <h4><%=@entry.actualCalories%> g</h4> </br>
+	    <span class="head">Protein Consumed:(g)</span> <h4><%=@entry.actualProtein%> g</h4> </br>
+	    <span class="head">Carbs Consumed:(g)</span> <h4><%=@entry.actualCarb%> g</h4> </br>
+	    <span class="head">Fat Consumed:(g)</span> <h4><%=@entry.actualFat%> g</h4> </br>
+
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+      <br>
+
+   </div>
+</body>
+
 

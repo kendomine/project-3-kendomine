@@ -6,17 +6,16 @@
             <i class="fa fa-plus-circle fa-2x add" aria-hidden="true"></i>
           <%end%>
       <%end%>
-      
-   <div class="row days" style="height:7vh;">
+   <div class="row " style="height:7vh;">
     <%if current_user.entries == []%>
       <%= link_to entries_path do%>
         <h2>Click to Add Entry</h2>
       <%end%>
     <%end%>
     <%@entries.each do |entry|%>
-    <div class="col-xs-2 days"><br>
+    <div class="row">
         <%=link_to entry_path(entry.id) do%>
-          <%= entry.day%>
+          <h3><%= entry.day%> -<%= entry.date%> </h3>
         <%end%>
      <%end%>
     </div>

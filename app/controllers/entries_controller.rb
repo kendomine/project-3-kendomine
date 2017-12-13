@@ -32,7 +32,7 @@ class EntriesController < ApplicationController
   # end
 
   def chart
-    @entry = Company.where("user_id = #{current_user.id}")
+    @entry = Entry.where("user_id = #{current_user.id}")
     respond_to do |format|
       format.json {render :json => @entry}
     end

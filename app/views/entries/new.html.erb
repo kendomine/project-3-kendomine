@@ -1,20 +1,18 @@
-<body class ="dashboards">
+<body class ="profilepage">
 	<div class="container-fluid">
-		<div class="row">
-	  	 <div class ="col-xs-1"></div>
-		<div class="col-xs-10"><div class="nutrition"> Nutrition Log</div></div>
-		<div class="col-xs-1"></div>
-	</div>
-	  <div class="row">
-	  	 <div class ="col-xs-1"></div>
-		<div class="col-xs-5 log" id="log2">FOOD LOG API</div>
-		<div class="col-xs-5 log" id="log2">NEW ENTRY</div>
-	  	 <div class ="col-xs-1"></div>
+  <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10 fill">
+          <h2 class="profilename"> Nutrition Log </h2>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+    <br>
 
-	  </div>
-	  <div class="row">
+ <div class="row">
 	  <div class ="col-xs-1"></div>
-	  	<div id="foodLog" class="col-xs-5">
+	  	<div id="foodLog" class="col-xs-5 goals">
+	  		<h3 class="sub">FOOD LOG API</h3>
 	  	<script src="http://platform.fatsecret.com/js?key=8ae71955d01b4f85ad39e05c633dd91b
 			&auto_load=true&auto_nav=false"></script>
 	  		<div id="my_container" class="fatsecret_container">
@@ -24,10 +22,15 @@
 			</script>
 
 		 	</div>
-	  	<div id="newEntry" class="col-xs-5">
-	  	<%=render "form"%>
-	  	</div>
-	  </div>
+      <div class="col-sm-5 goals" id="newEntry">
+        <div class="col-sm-12 "> </div>
+        <h3 class ="sub">NEW ENTRY</h3>
+         	<%=render "form"%>
+
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+      <br>
 
    </div>
 </body>

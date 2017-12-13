@@ -1,22 +1,10 @@
 #newEntry {
-	height: 68vh;
     overflow-y: auto;
     overflow-x: hidden;
-    border: 2px solid #d5d5d5;
-	box-shadow: 1px 1px 3px #b3b3b3;
-	font-color:black;
-    background-color: white;
-    margin-left: 2px;
+    height: 79vh;
 
     }
 
-#foodLog, {
-	border: 2px solid #d5d5d5;
-	box-shadow: 1px 1px 3px #b3b3b3;
-    background-color: white;
-    margin-right: 2px;
-
-}
 
 .nutrition{
 font-color:white;
@@ -75,18 +63,21 @@ color: black;
     width: 100%;
     color:white;
     }
- .add, .days{
+ .add,{
  color:black;
 }
 
-.log{
-    background-color: #d3d3d3;
-    text-align: center;
-    font-size:4vh;
-    margin-top : 5px;
-    padding: 2px; 
+.sub{
+    background-color:#d3d3d3;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+    text-shadow: 2px 2px black;
 }
 
-#log2{
-    margin-left:4px;
-}
+#new {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 29.6vh;
+
+    }
