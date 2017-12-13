@@ -31,12 +31,12 @@ class EntriesController < ApplicationController
   #   end
   # end
 
-  # def chart
-  #   @company = Company.where("user_id = #{current_user.id}")
-  #   respond_to do |format|
-  #     format.json {render :json => @company}
-  #   end
-  # end
+  def chart
+    @entry = Company.where("user_id = #{current_user.id}")
+    respond_to do |format|
+      format.json {render :json => @entry}
+    end
+  end
 
   def edit
   end

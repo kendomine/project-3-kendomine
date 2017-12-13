@@ -6,12 +6,13 @@ class ProfilesController < ApplicationController
   def index
     if current_user.profile
       @profile = current_user.profile
-      @height= @profile.height * 30.48 * 6.25
+      @conversion= @profile.height * 30.48
+      @height = @conversion * 6.25 
       @weight = @profile.weight * 0.45359237
-      @age = 5 * @profile.age + 5
+      @age = 5 * @profile.age
       @fage = 5 * @profile.age - 165
-      @bmr = 10 * @weight + @height - @age 
-      @fbmr = 10 * @weight + @height -@fage
+      @bmr = 10 * @weight + @height - @age + 5 - 400
+      @fbmr = 10 * @weight + @height -@fage 
 
 
 

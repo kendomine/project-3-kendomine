@@ -15,7 +15,7 @@
         <div class="col-sm-1"></div>
       	<div class="col-sm-5 maps">
         	<div class="col-sm-12 header"> <h3> Daily Weigh In:</h3></div>
-
+        <%= line_chart Entry.where("user_id = #{current_user.id}").group_by_day(:date).maximum(:weighIn), ytitle: "Weight", colors:["#7b99c1"],download: true %>
 			</div>
 
       	<div class="col-sm-5 diary">
