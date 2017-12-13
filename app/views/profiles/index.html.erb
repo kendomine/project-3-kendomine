@@ -29,10 +29,11 @@
         <div class="col-sm-12 header"> <h3> Goals:</h3></div>
 
       <span class="statistics">TDEE: </span> <%=@tdee.ceil%> Calories<br>
+      <br>
       <span class="statistics">GAIN WEIGHT:</span> <%=@bulk.ceil%> Calories<br>
+      <br>
       <span class="statistics">LOSE WEIGHT:</span> <%=@cut.ceil%> Calories<br>
-        <br>
-        <br>
+
 
         </div>
         <div class="col-sm-1"></div>
@@ -47,10 +48,10 @@
       <div class="col-sm-5 goals">
         <div class="col-sm-12 header"> <h3> Goals: Gain Weight</h3></div>
 
-      <span class="statistics">TDEE: </span> <%=@tdee.ceil%> Calories<br>
-      <span class="statistics">GAIN WEIGHT:</span> <%=@tdee.ceil%> Calories<br>
-      <span class="statistics">LOSE WEIGHT:</span> <%=@tdee.ceil%> Calories<br>
-        <br>
+
+      <span class="statistics">GAIN WEIGHT:</span> <%=@bulk.ceil%> Calories<br>
+        <br><strong>MACROS:</strong>
+        <br> <span class="statistics"><strong>Protein: </strong> <%=@bprotein.ceil%> g </span> <strong> Carbs:</strong> <%=@bcarbs.ceil%> g</span> <span class="statistics"><strong>Fat:</strong> <%=@bfat.ceil%> g</span>
       </div>
         </div>
         <div class="col-sm-1"></div>
@@ -69,12 +70,9 @@
       </div>
       <div class="col-sm-5 goals">
         <div class="col-sm-12 header"> <h3> Goals: Lose Weight</h3></div>
-
-      <span class="statistics">TDEE: </span> <%=@tdee.ceil%> Calories<br>
-      <span class="statistics">GAIN WEIGHT:</span> <%=@tdee.ceil%> Calories<br>
-      <span class="statistics">LOSE WEIGHT:</span> <%=@tdee.ceil%> Calories<br>
-        <br>
-
+      <span class="statistics">LOSE WEIGHT:</span> <%=@cut.ceil%> Calories<br>
+        <br><strong> MACROS:</strong>
+       <br><span class="statistics"><strong>Protein: </strong> <%=@cprotein.ceil%> g </span> <strong> Carbs:</strong> <%=@ccarbs.ceil%> g</span> <span class="statistics"><strong>Fat:</strong> <%=@cfat.ceil%> g</span>
 
   </div>
 <body>

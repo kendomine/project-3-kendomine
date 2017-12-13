@@ -1,22 +1,29 @@
-<div class="container-fluid">
-
-	<h1 id="dashboard" style="text-align: center">Nutrition Log</h1>
+<body class ="dashboards">
+	<div class="container-fluid">
+		<div class="row">
+	  	 <div class ="col-xs-1"></div>
+		<div class="col-xs-10"><div class="nutrition"> Nutrition Log</div></div>
+		<div class="col-xs-1"></div>
+	</div>
 	  <div class="row">
 	  	 <div class ="col-xs-1"></div>
-		<div class="col-xs-5"><h2 style="text-align: center">FOOD LOG API</h2></div>
-		<div class="col-xs-5"><h2 style="text-align: center">NEW ENTRY</h2></div>
+		<div class="col-xs-5 log" id="log1">FOOD LOG API</div>
+		<div class="col-xs-5 log" id="log2">NEW ENTRY</div>
+	  	 <div class ="col-xs-1"></div>
+
 	  </div>
 	  <div class="row">
 	  <div class ="col-xs-1"></div>
 	  	<div id="foodLog" class="col-xs-5">
 	  	<script src="http://platform.fatsecret.com/js?key=379da0b756104441aa2e30ba06d3051b
-			&auto_load=true&auto_nav=false"></script>
+			&auto_load=true&auto_nav=false">
+			</script>
 	  		<div id="my_container" class="fatsecret_container">
 	  	    </div>
 			<script>
-					fatsecret.variables.navOptions = fatsecret.navFeatures.food_diary | fatsecret.navFeatures.home;
-			</script>
-			<script>
+					$(document).on('turbolinks:load', function(){
+						fatsecret.variables.navOptions = fatsecret.navFeatures.food_diary | fatsecret.navFeatures.home;
+					})
 			</script>
 
 		 	</div>
@@ -25,7 +32,7 @@
 	  	</div>
 	  </div>
 
-</div>
-
+   </div>
+</body>
 
 

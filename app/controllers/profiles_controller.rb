@@ -12,18 +12,34 @@ class ProfilesController < ApplicationController
       @fage = 5 * @profile.age - 165
       @bmr = 10 * @weight + @height - @age 
       @fbmr = 10 * @weight + @height -@fage
-      @bulk = @bmr * @profile.activity + 500
-      @cut = @bmr * @profile.activity - 500
 
 
 
 
       if @profile.gender == "Male"
         @tdee = @bmr * @profile.activity
-     
+        @bulk = @tdee + 500
+        @cut = @tdee - 500
+        @bprotein = @bulk * 0.30 / 4
+        @bcarbs = @bulk * 0.40 / 4
+        @bfat = @bulk * 0.30 / 9
+        @cprotein = @cut * 0.40 / 4
+        @ccarbs = @cut * 0.30 / 4
+        @cfat = @cut * 0.30 / 9
+
+
+
       else
 
         @tdee = @fbmr * @profile.activity
+        @bulk = @tdee + 500
+        @cut = @tdee - 500
+        @bprotein = @bulk * 0.30 / 4
+        @bcarbs = @bulk * 0.40 / 4
+        @bfat = @bulk * 0.30 / 9
+        @cprotein = @cut * 0.40 / 4
+        @ccarbs = @cut * 0.30 / 4
+        @cfat = @cut * 0.30 / 9
       end
     else
       redirect_to new_profile_path
